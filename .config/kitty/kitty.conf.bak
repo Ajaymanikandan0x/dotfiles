@@ -1,0 +1,82 @@
+# Kitty Configuration
+
+## Appearance
+
+font_family     Meslo Nerd Font
+font_size       12.0
+
+## Window Management
+
+map kitty_mod+e         new_window
+map kitty_mod+shift+e   close_window
+map kitty_mod+h         previous_window
+map kitty_mod+l         next_window
+map kitty_mod+j         new_os_window
+map kitty_mod+k         close_tab
+
+## Tabs Management
+
+map kitty_mod+t         new_tab
+map kitty_mod+w         close_tab
+map kitty_mod+right     next_tab
+map kitty_mod+left      previous_tab
+
+## Clipboard Management
+
+map kitty_mod+c         copy_to_clipboard
+map kitty_mod+v         paste_from_clipboard
+
+## Scrolling
+
+map ctrl+up             scroll_line_up
+map ctrl+down           scroll_line_down
+map ctrl+page_up        scroll_page_up
+map ctrl+page_down      scroll_page_down
+
+## Font Sizes
+
+map kitty_mod+equal     change_font_size all +2.0
+map kitty_mod+minus     change_font_size all -2.0
+map kitty_mod+backspace change_font_size all 0
+
+## Fullscreen and Maximization
+
+map kitty_mod+f11       toggle_fullscreen
+map kitty_mod+f10       toggle_maximized
+
+## Clear Terminal
+
+map kitty_mod+delete    clear_terminal reset active
+
+## Edit Kitty Config
+
+map kitty_mod+f2        edit_config_file
+
+## Miscellaneous
+
+map ctrl+l              clear_terminal scroll active : send_text normal,application \x0c
+
+## Shell and Editor Settings
+
+shell .
+editor .
+
+## Remote Control and Clipboard
+
+allow_remote_control    no
+clipboard_control       write-clipboard write-primary
+allow_hyperlinks        yes
+
+## Update Check Interval
+
+update_check_interval   24
+
+## Linux Specific Settings
+
+linux_display_server    auto
+
+# BEGIN_KITTY_THEME
+# Cherry
+include current-theme.conf
+# END_KITTY_THEME
+

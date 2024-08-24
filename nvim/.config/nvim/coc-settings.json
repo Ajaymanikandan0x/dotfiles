@@ -1,9 +1,0 @@
-{
-    "plugins": {
-      "flutter-tools.nvim": {
-        "flutter_root": "/home/ajay_/flutter_linux_3.22.0-stable/flutter/bin",
-        "android_sdk_path": "/home/ajay_/Android/Sdk"
-      }
-    }
-  }
-  

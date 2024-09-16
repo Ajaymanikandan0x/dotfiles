@@ -60,7 +60,7 @@ alias spico='sedit'
 alias nano='edit'
 alias snano='sedit'
 alias vim='nvim'
-
+alias cat='bat'
 # Replace batcat with cat on Fedora as batcat is not available as a RPM in any form
 if command -v lsb_release >/dev/null; then
 	DISTRIBUTION=$(lsb_release -si)
@@ -101,15 +101,8 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 #######################################################
 
 # Alias's for SSH
-# alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
+ alias ubuntu='ssh -i ~/Documents/ubuntu24.4.pem ubuntu@35.174.106.233'
 
-# Alias's to change the directory
-alias web='cd /var/www/html'
-
-# Alias's to mount ISO files
-# mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
-# umount /home/NAMEOFISO.iso
-# (Both commands done as root only.)
 
 #######################################################
 # GENERAL ALIAS'S
@@ -507,10 +500,10 @@ function whatsmyip ()
 	# Internal IP Lookup.
 	if [ -e /sbin/ip ]; then
 		echo -n "Internal IP: "
-		/sbin/ip addr show wlp0s20f3 | grep "inet " | awk -F: '{print $1}' | awk '{print $2}'
+		/sbin/ip addr show wlan0 | grep "inet " | awk -F: '{print $1}' | awk '{print $2}'
 	else
 		echo -n "Internal IP: "
-		/sbin/ifconfig wlp0s20f3 | grep "inet " | awk -F: '{print $1} |' | awk '{print $2}'
+		/sbin/ifconfig wlan0 | grep "inet " | awk -F: '{print $1} |' | awk '{print $2}'
 	fi
 
 	# External IP Lookup

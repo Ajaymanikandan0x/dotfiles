@@ -18,7 +18,6 @@ return {
     lazy = false,
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
       local lspconfig = require("lspconfig")
       lspconfig.tsserver.setup({
         capabilities = capabilities
@@ -37,6 +36,14 @@ return {
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+
+      -- Add nvim-cmp setup for LSP completion selection
+      local cmp = require('cmp')
+      cmp.setup({
+        mapping = {
+          ['<Tab>'] = cmp.mapping.confirm({ select = true }),  -- Confirm selection with Tab
+        },
+      })
     end,
   },
 }

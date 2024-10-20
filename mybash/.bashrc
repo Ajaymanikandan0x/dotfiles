@@ -557,8 +557,6 @@ lazyg() {
 # Set the ultimate amazing command prompt
 #######################################################
 
-alias hug="hugo server -F --bind=10.0.0.97 --baseURL=http://10.0.0.97"
-
 # Check if the shell is interactive
 if [[ $- == *i* ]]; then
     # Bind Ctrl+f to insert 'zi' followed by a newline
@@ -568,9 +566,9 @@ fi
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
 
 # Install Starship - curl -sS https://starship.rs/install.sh | sh
-#eval "$(starship init bash)"
-export PATH="$HOME/testing/ohmyposh:$PATH"
-eval "$(oh-my-posh init bash --config ~/testing/ohmyposh/catppuccin_mocha.omp.json)"
+eval "$(starship init bash)"
+#export PATH="$HOME/testing/ohmyposh:$PATH"
+#eval "$(oh-my-posh init bash --config ~/testing/ohmyposh/catppuccin_mocha.omp.json)"
 eval "$(zoxide init bash)"
 
 export PATH="$PATH:/home/ajay_/.cache/firebase/tools/bin"

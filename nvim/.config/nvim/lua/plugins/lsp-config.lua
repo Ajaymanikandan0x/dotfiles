@@ -19,7 +19,10 @@ return {
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
+  --    lspconfig.tsserver.setup({
+  --    capabilities = capabilities
+  --    })
+        lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
       lspconfig.solargraph.setup({

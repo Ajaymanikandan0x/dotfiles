@@ -577,7 +577,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 export PATH="$HOME/testing/yazi/target/release:$PATH"
-export CHROME_EXECUTABLE=/usr/bin/google-chrome
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export PATH="$PATH:/home/ajay_/development/flutter/bin"

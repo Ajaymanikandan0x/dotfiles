@@ -581,3 +581,4 @@ export LANG=en_US.UTF-8
 export PATH="$HOME/testing/yazi/target/release:$PATH"
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export PATH="$PATH:/home/ajay_/development/flutter/bin"
+export PATH="$PATH:/home/ajay_/development/jdk/bin"

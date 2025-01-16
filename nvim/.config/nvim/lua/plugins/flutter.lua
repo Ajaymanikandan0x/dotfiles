@@ -34,7 +34,7 @@ return {
         -- Configuration for language server protocol and autocompletion
         require("lspconfig").dartls.setup{
             capabilities = require('cmp_nvim_lsp').default_capabilities(),
-            cmd = { "~/development/flutter/bin/flutter", "language-server", "--protocol=lsp" } -- Adjusted path here
+          cmd = { vim.fn.expand("~") .. "/development/flutter/bin/flutter", "language-server", "--protocol=lsp" }
         }
     end,
 }

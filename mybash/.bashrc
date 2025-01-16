@@ -239,6 +239,9 @@ alias tmk='tmux kill-session -t'
 alias kssh="kitty +kitten ssh"
 
 # alias to cleanup unused docker containers, images, networks, and volumes
+#
+# lazy docker 
+alias ld='sudo lazydocker'
 
 alias docker-clean=' \
   docker container prune -f ; \

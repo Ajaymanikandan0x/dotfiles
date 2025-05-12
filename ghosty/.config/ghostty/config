@@ -1,5 +1,5 @@
 theme = catppuccin-mocha.conf
-background-opacity=0.8
+background-opacity=0.9
 window-decoration =false
 font-family = FiraCode
 font-size = 13
